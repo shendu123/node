@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>MVC1</title>
+	</head>
+	<body ng-controller="FirstController">
+		姓名：<input ng-model="name"/>
+		<p>
+			{{"Hello "+ name}}
+		</p>
+		<script src="angular146/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			var app=angular.module("app",[]);
+			app.controller("FirstController",function($scope){
+				$scope.name="zhangguo";
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <table>
+      <tr><td>姓名</td><td>年龄</td></tr>
+
+      <%=user_list.length%>
+      <%for(var i=0; i<user_list.length; ++i){%>
+        <tr>
+          <td><%=user_list[i].name%></td>
+          <td><%=user_list[i].age%></td>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
+<script>
+  user_list = "<%=user_list%>";
+  //user_list = JSON.stringify(user_list);
+  console.log(user_list);
+  </script>
